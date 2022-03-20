@@ -1,3 +1,5 @@
+//? Summary: number operation 
+
 #include <bits/stdc++.h>
 // #define for(c, x) for (int i=c; i<=x; i++)
 #define LLtype long long
@@ -42,12 +44,12 @@ int main(){
     *cout << x%m << "\n";
 
     */
-    long long x = 1; 
-    int m = 4, n = 3; //? In this example, the number we're using right now is n!, which is 3 * 2 * 1, and the remainder is 4 
+    // long long x = 1; 
+    // int m = 4, n = 3; //? In this example, the number we're using right now is n!, which is 3 * 2 * 1, and the remainder is 4 
                       //? 3 * 2 * 1 = 6, and 6/4 has the remainder of 2
-    for(int i = 2; i <= n; i++){
-        x = (x*i)%m; 
-    }
+    // for(int i = 2; i <= n; i++){
+        // x = (x*i)%m; 
+    // }
     // cout << x%m << "\n"; //*Output: 2 
     //? In C++, the remainder of the negative number is either zero or negative 
     //? If the result is negative, we will add m. We'll make a loop that whenever it is still less than 0, we will add m.
@@ -56,14 +58,44 @@ int main(){
     //feat: Floating point numbers
     //? usual floating point types are the 64-bit double, and an extension in the g++ compiler, the 80-bit long double
     //? long double is more accurate
-    printf("%.9f \n", x); //*Output: 0.000000000000000 
+    // printf("%.9f \n", x); //*Output: 0.000000000000000 
                           //? Why? In this example, I let the x to be a long long type, hence, the solution can't be 1
                           
     
     long double ld_number = 12;
     float floating_number = 12; 
     // printf("%.9f \n", floating_number); //*Output: 12.000000000
+    //? floating error: There are a lot of difficulties in learning with the floating point numbers, which is the rounding errors
+    //* Example: 
+    // double x = 0.3*3+0.1; 
+    // printf("%.20f \n", x); //*Output: 0.99999999999999988898 
+                           //? OOF, terrible rounding errors
+    //TODO: INTRODUCING COMPARING THE FLOATING NUMBER
+    // const float EPSILON = 1e-9; 
+    // printf("%E \n", EPSILON); //*Output: 1.000000E-09
+    // const float EPSILON2 = pow(10,-9); 
+    // cout << EPSILON2; //*Output: 1e-09 
+    //? doesnot matter what value you are using, the output would just be the same
     
+    //feat: Checking the number with tolerance 
+    long double a = 1, b = 1; 
+    // cout << a - b; //*Output: 0 (should be good eh?)
+    //? What about this? 
+    a = 0.3*3+ 0.1;
+    // cout << a - b << "\n"; //*Output: -1.11022e-16 
+                   //? That is so bad to see, it means the two are not equal to each other
+    // if (abs(a - b) < 1e-9){
+    //     //? check to see if a and b is equal?
+    //     cout << "They are equal to each other \n";
+        
+    // }
+    // else{
+    //     cout << "No, they are not \n";
+    // }
+    //? Facts: Using double, it is possible to accurately represent all integers whose absolute value is at most 2^53 (that is approx. 16 numbers!) 
+    
+    
+       
     
                 
     
