@@ -9,7 +9,7 @@ using namespace std;
 //! Syntax: (what kinds of thing you define here) (what is being defined) (what is used to define)
 
 //feat: Type Name
-typedef long long ll;
+typedef long long ll; //? In this example, I accidentally use lowercase ll. It is fine for the code in general, but in practice, it is recommeneded to use macros as uppercase
 //err: Dangerous here
 //? What if we define something that is really wrong? 
 // typedef float long long; //*Output: error: declaration does not declare anything [-fpermissive]
@@ -34,6 +34,9 @@ typedef vector<int, int> pi;
 //? Better define keyword: 
 // #define SQ(a) (a)*(a) //ERR: DO not uncomment this line of code. This one is problematic since I redefine the macros (and the compiler will talk to you about this)
 #define SQ2(a) (a)*(a)
+
+//! Remember: typedef define the real syntax first, then the changing factors later. However, for the #define of the macros, the syntax used to define goes second, while 
+//!             the one which is changed is used for the first. 
 int main(){
     
     //feat: Type Name
