@@ -1,8 +1,7 @@
 //? Summary: Mathematics in competitive programming
-//! This page is not about code at all (well just a few). I am writing all of this here because I have setted my six commenting, so it is much easier for 
+//! This page is not about code at all, in fact it is not. I am writing all of this here because I have set my six commenting, so it is much easier for 
 //! me to move back and forth with the coloring style, while if you have read this and decided not to change the color of the comments, will have absolute 
-//! no affects in reading this. Here's the summary of the math knowledge that I believe a lot of you will get used with, and enjoy doing it in the long run.
-//! I will also put them as text file, in case you want to use it. 
+//! no affects in reading this. Here's the summary of the math knowledge that I believe a lot of you will get used with, and enjoy doing it in the long run 
 
 
 //feat: summation formula 
