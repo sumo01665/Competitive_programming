@@ -1,6 +1,10 @@
+//? Summary: The data structure: Dynamic Array (with the vector and the string)
 #include <bits/stdc++.h> 
 
 using namespace std; 
+
+//Define macros for loop
+//function 
 
 int main() {
     vector <int> v; 
