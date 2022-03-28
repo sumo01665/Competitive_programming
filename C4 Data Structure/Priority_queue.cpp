@@ -3,7 +3,7 @@
     // - It is used for insertion, and retrieval and removal of either the minimum or maximum element
     //! Insertion and removal take O(log(n)) time, and retrieval takes O(1) time
     
-    //? A priority queue is implemented using a ehap structure that is much simpler than a balanced binary tree in an ordered set
+    //? A priority queue is implemented using a heap structure that is much simpler than a balanced binary tree in an ordered set
     
 #include <bits/stdc++.h>
 
