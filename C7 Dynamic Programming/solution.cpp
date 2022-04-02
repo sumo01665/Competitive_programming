@@ -16,9 +16,12 @@ int main(){
     count[0] = 1; 
     for (int x = 1; x <= n; x++){
         for (auto c: coins){
-            count[x] += count[x-c]; 
+            count[x] += count[x-c];
+            //added if you want to find the number of modulo m
+            //count[x] %= m; 
             
         }
     }
     
+    // If the number of solutions is os large that it is not required to calculate the exact number but it is enough to give the answer modulo m where, m = 10^9 + 7
 }
