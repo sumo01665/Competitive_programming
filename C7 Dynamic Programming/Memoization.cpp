@@ -33,9 +33,10 @@ int solve(int x){
 
 int main(){
     //feat: The alternatives
-    int value[N];
+    int value[N] = {23,34,43};
     bool ready[N]; 
-    int value[N]; 
+     
+    int n = sizeof(value)/ sizeof(value[0]);
     int coins[] = {2,3,4,10}; 
     value[0] = 0; 
     for (int x = 1; x <= N; x++){
@@ -48,5 +49,26 @@ int main(){
         }
         //? Most competitive programmers prefer this implementation, because it is shorter and has lower constant factors
     }
-
+    
+    //feat: Constructing a solution 
+    //? If you are asked to give the value of an optimal solution and to give an example, the following code is good to implement
+    
+    int first[N];
+    value[0] = 0; 
+    for (int x = 1; x <= n; x++){
+        value[x] = INF; 
+        for (auto c : coins){
+            if (x - c >= 0 && value[x - c] + 1 < value[x]){
+                value[x] = value[x-c] +1; 
+                first[x] = c; 
+            }
+        }
+    
+    }
+    
+    //? The following code can be used to print the coins
+    while (n > 0){
+        cout << first[n] << "\n"; 
+        n -= first[n];
+    }
 }
