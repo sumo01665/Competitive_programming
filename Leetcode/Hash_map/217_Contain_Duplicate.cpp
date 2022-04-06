@@ -21,7 +21,7 @@ bool containsDuplicate(vector<int>& nums) {
         }  
     }
     return true; 
-    //? The runtime for this solution is O(n^2*log(n))
+    //? The runtime for this solution is O(n*log(n))
 }
 
 bool containsDuplicate2(vector<int>& nums) {

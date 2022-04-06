@@ -1,0 +1,1 @@
+if(points[i][j])
