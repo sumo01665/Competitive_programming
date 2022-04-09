@@ -62,7 +62,7 @@ int nearestValidPoint2(int x, int y, vector<vector<int>>& points) {
     int min = INT_MAX;
     int distance =0; 
     int sol= -1; 
-    //? Don't need to check for existance if there's already an answer, just need to start it at -1. 
+    //? Don't need to check for existence if there's already an answer, just need to start it at -1. 
     for (int i = 0; i < points.size(); i++){
         if(points[i][0] == x || points[i][1] == y){
             distance = abs(x - points[i][0]) + abs(y -points[i][1]);
