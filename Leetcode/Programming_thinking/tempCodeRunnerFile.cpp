@@ -1,1 +1,1 @@
-if(points[i][j])
+ // return sum; 

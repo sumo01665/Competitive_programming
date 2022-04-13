@@ -37,8 +37,8 @@ int main() {
     // printf("%d %d \n", &a, &b); //*Output: (The memory location of the data)
        
     // string s; 
-    // getline(cin, s); //*Input: Whassup homie 
-    // cout << s << "\n"; //*Output: Whassup homie
+    // getline(cin, s); //*Input: Whaps up homie 
+    // cout << s << "\n"; //*Output: Whaps up homie
     // getline(scanf, s); //Err: This doesn't work with the scanf
     // printf("%s \n" , s); //*Output: p¨▀Íß(Random letter) 
 
