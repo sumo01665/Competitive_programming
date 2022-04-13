@@ -9,10 +9,10 @@ using namespace std;
 //! Syntax: (what kinds of thing you define here) (what is being defined) (what is used to define)
 
 //feat: Type Name
-typedef long long ll; //? In this example, I accidentally use lowercase ll. It is fine for the code in general, but in practice, it is recommeneded to use macros as uppercase
+typedef long long ll; //? In this example, I accidentally use lowercase ll. It is fine for the code in general, but in practice, it is recommended to use macros as uppercase
 //err: Dangerous here
 //? What if we define something that is really wrong? 
-// typedef float long long; //*Output: error: declaration does not declare anything [-fpermissive]
+// typedef float long long; //*Output: error: declaration does not declare anything [-f-permissive]
                          //? It will not work, as this is the error you get in the compiler screen
 //? Lesson: However, it is still doable if you define float to something like longlong, don't trick yourself into these booby trap, it's not fun at the end of the day
 //*More advance stuffs: 
