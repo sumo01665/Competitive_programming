@@ -10,6 +10,9 @@ Given an array of numbers arr, return true if the array can be rearranged to for
 using namespace std;
 static int fast_io = [](){ios::sync_with_stdio(0); cin.tie(nullptr); cout.tie(nullptr); return 0;}();
 
+//Macros
+#define LOG(x) cout << x < endl; 
+
 //Functions
 //? Straight-forward solution: 
 bool canMakeArithmeticProgression(vector<int>& arr) {
@@ -70,7 +73,6 @@ public:
 //Main function 
 int main() {
     vector<int> arr = {2,4,6,8,9}; 
-    cout << canMakeArithmeticProgression(arr); 
-    
-    
+    cout << canMakeArithmeticProgression(arr);    
+    LOG("true");    
 }
