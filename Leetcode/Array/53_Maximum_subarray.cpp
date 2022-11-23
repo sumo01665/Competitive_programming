@@ -33,7 +33,7 @@ int maxSubArray2(vector<int>& nums) {
         
         best2 = max(best, best2); 
         cout << "This is best2: " << best2 << endl; 
-    }        
+    }       
     return best2; 
 }
 

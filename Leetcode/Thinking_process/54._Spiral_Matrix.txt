@@ -1,0 +1,14 @@
+Question problem: 
+
+[[1,2,3],[4,5,6],[7,8,9]
+
+
+//First step: m = rows, n = columns 
+Running through the first rows: matrix[0][0] -> matrix[0][n]
+Running through the last rows: matrix[0][n] -> matrix[m][n] 
+
+
+//?Two approaches: recursive: Base case: m x n = 1; 
+			               Recursive step: [0][0] -> [0][n - 1]
+						       [0][n-1] -> [m - 1][n - 1]								
+		   iterative: 

@@ -142,5 +142,7 @@ int main(){
     cout << endl; 
     }
 
+    return EXIT_SUCCESS; 
+
     
 }
