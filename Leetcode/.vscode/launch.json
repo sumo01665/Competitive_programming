@@ -1,4 +1,5 @@
 {
-    "miDebuggerPath": "c:\\mingw\\bin\\gdb.exe",
+    // "miDebuggerPath": "c:\\mingw\\bin\\gdb.exe",
+    "miniDebuggerPath": "c:/MinGW/bin/gdb.exe"
     
 }

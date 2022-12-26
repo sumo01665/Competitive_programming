@@ -10,14 +10,15 @@ static auto fast_io = [](){
     cin.tie(nullptr); 
     cout.tie(nullptr);     
     return false;
-}
+}(); 
 
 
 
 
 
 int main(){ 
-    
+    cout << "Something" << endl; 
+    return 0; 
     
     
     
