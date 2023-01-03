@@ -21,7 +21,36 @@ class Solution
 {
 public:
     // feat: Function prototype
-    //! Solution  1: Run time exceeded
+
+    vector<vector<string>> groupAnagrams(vector<string> &strs)
+    {
+        if (strs.empty())
+            return vector<vector<string>>();
+        if (strs.size() == 1)
+            return {{strs[0]}};
+
+        unordered_map<string, vector<string>> hash;
+        vector<vector<string>> solution;
+        // string sorted; //? Sort results, which is used after s has been sorted
+        string unsorted;  //Unsort value
+
+        for (auto s: strs)
+        {
+            unsorted = s;
+            sort(s.begin(), s.end());
+            hash[s].push_back(unsorted);
+        }
+        for (auto hash_value : hash)
+            solution.push_back(hash_value.second);
+        return solution;
+
+    }
+};
+
+// @lc code=end
+
+/*
+//! Solution  1: Run time exceeded
     bool anagram_check(string name1, string name2)
     {
         sort(name1.begin(), name1.end());
@@ -29,7 +58,8 @@ public:
         return (name1 == name2);
     }
 
-    vector<vector<string>> groupAnagrams(vector<string> &strs)
+//? Solution 1: Create the two loops vectors, and create the empty hash table to store value
+vector<vector<string>> groupAnagrams(vector<string> &strs)
     {
         vector<vector<string>> ans;
         vector<string> temp; //* Temporary placeholders for solution strings
@@ -66,6 +96,6 @@ public:
         // cout << hash_check["ate"] << endl;
         return ans;
     }
-};
 
-// @lc code=end
+
+*/
