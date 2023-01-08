@@ -22,27 +22,31 @@ class Solution
 public:
     // feat: Function prototype
 
+    //? Jianchao solution
     vector<vector<string>> groupAnagrams(vector<string> &strs)
     {
-        if (strs.empty())
-            return vector<vector<string>>();
-        if (strs.size() == 1)
-            return {{strs[0]}};
-
-        unordered_map<string, vector<string>> hash;
-        vector<vector<string>> solution;
-        // string sorted; //? Sort results, which is used after s has been sorted
-        string unsorted;  //Unsort value
-
-        for (auto s: strs)
-        {
-            unsorted = s;
-            sort(s.begin(), s.end());
-            hash[s].push_back(unsorted);
+        unordered_map<string, vector<string>> mp;
+        for (string s : strs) {
+            mp[strSort(s)].push_back(s);
         }
-        for (auto hash_value : hash)
-            solution.push_back(hash_value.second);
-        return solution;
+        vector<vector<string>> anagrams;
+        for (auto p : mp) {
+            anagrams.push_back(p.second);
+        }
+        return anagrams;
+    }
+private:
+    string strSort(string s){
+        int n = s.size();
+        int counter[26] = {0};
+        for (char character: s){
+            counter[character - 'a']++;
+        }
+        string t;
+        for (int character = 0; character < 26; character++){
+            t += string(counter[character], character + 'a'); //
+        }
+        return t;
 
     }
 };
@@ -96,6 +100,32 @@ vector<vector<string>> groupAnagrams(vector<string> &strs)
         // cout << hash_check["ate"] << endl;
         return ans;
     }
+
+    //! Solution 2: Intuitive solution with sorting
+     vector<vector<string>> groupAnagrams(vector<string> &strs)
+    {
+        if (strs.empty())
+            return vector<vector<string>>();
+        if (strs.size() == 1)
+            return {{strs[0]}};
+
+        unordered_map<string, vector<string>> hash;
+        vector<vector<string>> solution;
+        // string sorted; //? Sort results, which is used after s has been sorted
+        string unsorted;  //Unsort value
+
+        for (auto s: strs)
+        {
+            unsorted = s;
+            sort(s.begin(), s.end());
+            hash[s].push_back(unsorted);
+        }
+        for (auto hash_value : hash)
+            solution.push_back(hash_value.second);
+        return solution;
+
+    }
+};
 
 
 */
