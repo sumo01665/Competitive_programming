@@ -22,6 +22,7 @@ public:
     bool isValid(string s)
     {
         stack<char> stk;
+        
         unordered_map<char, char> parenthesis;
         parenthesis = {{')', '('},
                        {']', '['},
