@@ -82,6 +82,7 @@ public:
     matrix[0][0] = VISITED;
 
      while (changeDirection < 2) {
+     //? 0 < row < rows && 0 < col < cols && visited or not
             while (row + directions[currentDirection][0] >= 0 &&
                    row + directions[currentDirection][0] < rows &&
                    col + directions[currentDirection][1] >= 0 &&
@@ -90,15 +91,15 @@ public:
                    [col + directions[currentDirection][1]] != VISITED) {
                 // Reset this to 0 since we did not break and change the direction.
                 changeDirection = 0;
-                // Calculate the next place that we will move to.
+                // Calculate the next place that we will move to. //? row if row is in the first location, col if col is in the first location (one pivot point)
                 row = row + directions[currentDirection][0];
                 col = col + directions[currentDirection][1];
                 solution.push_back(matrix[row][col]);
                 matrix[row][col] = VISITED;
             }
-            // Change our direction.
+            //? Change our direction (left, down, right, up)
             currentDirection = (currentDirection + 1) % 4;
-            // Increment change_direction because we changed our direction.
+            // Increment change_direction because we changed our direction, try +2 solution, if not return the full direction 
             changeDirection++;
         }
         return solution;
