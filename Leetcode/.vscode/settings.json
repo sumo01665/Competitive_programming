@@ -18,6 +18,8 @@
         "span": "cpp",
         "regex": "cpp",
         "valarray": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "*.tcc": "cpp",
+        "system_error": "cpp"
     }
 }
