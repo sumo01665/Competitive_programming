@@ -20,6 +20,9 @@
         "valarray": "cpp",
         "cmath": "cpp",
         "*.tcc": "cpp",
-        "system_error": "cpp"
+        "system_error": "cpp",
+        "set": "cpp",
+        "source_location": "cpp",
+        "type_traits": "cpp"
     }
 }

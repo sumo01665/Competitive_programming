@@ -19,24 +19,18 @@ class Solution {
 public:
     ListNode* insertionSortList(ListNode* head) {
         bool has_swapped = false;
-        ListNode* header = head;
+        ListNode* current = head;
         //? Insertion
-        while( head != nullptr || head->next != nullptr){
-
-            while (head -> next -> val <  head -> val){
-                swap(head -> next, head);
-                return head;
+        while (current != nullptr && current-> next != nullptr){
+            for (int i = 0; )
+            if (current > current -> next ){
+                swap(current, current -> next);
+                current = current -> next;
             }
-
-            if (has_swapped == true){
-
-            }
-
         }
+        swap(current, current -> next);
 
-
-
-        return head;
+        return current;
     }
 };
 // @lc code=end
