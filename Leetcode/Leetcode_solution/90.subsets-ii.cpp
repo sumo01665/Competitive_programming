@@ -5,15 +5,25 @@
  */
 
 // @lc code=start
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
+    int power_of_two(int n){
+        return (n == 0) ? 1 : power_of_two(n - 1);
+    }
+
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-        vector <vector <int>>  solution; 
-        
-        
-        
+        if (nums.size() == 0) return {};
+        int count = 0;
+
+
+        vector <vector<int>>  solution;
+
+
+
         return solution;
-        
+
     }
 };
 // @lc code=end

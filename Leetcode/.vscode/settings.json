@@ -23,6 +23,7 @@
         "system_error": "cpp",
         "set": "cpp",
         "source_location": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "functional": "cpp"
     }
 }
