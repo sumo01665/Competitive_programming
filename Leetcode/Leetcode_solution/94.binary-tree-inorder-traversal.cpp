@@ -16,20 +16,36 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+#include <bits/stdc++.h>
+
+class Solution
+{
 public:
-    vector <int> solution;
-    vector<int> inorderTraversal(TreeNode* root) {
-        if ( root == NULL) return {};
+    vector<int> inorderTraversal(TreeNode *root)
+    {
+        vector<int> solution; // For the return
+        stack<TreeNode *> s;
+        if (root)
+            s.push(root);
+        TreeNode *cur;
+        while (!s.empty())
+        {
+            cur = s.top(); // Already filled in for the first
+            s.pop();
 
-        inorderTraversal(root -> left);
-        solution.push_back(root ->  val);
-        inorderTraversal(root -> right);
+            if (cur->left)
+            {
+                s.push(cur->left);
+                solution.push_back(cur->val);
+            }
+            if (cur->right)
+            {
 
-
+                s.push(cur->right);
+                solution.push_back(cur->val);
+            }
+        }
         return solution;
-
     }
 };
 // @lc code=end
-
